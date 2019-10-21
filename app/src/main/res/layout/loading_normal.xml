@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiajia.mvp.ui.widget.ThreePointLoadingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:pointColor="@color/colorPrimary"
+    android:clickable="true"
+    android:visibility="gone" />

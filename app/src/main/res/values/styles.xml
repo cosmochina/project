@@ -1,0 +1,208 @@
+<resources>
+
+    <!--日间主题-->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <!--这是App深色调的基本颜色，主要用于通知栏背景-->
+        <item name="colorPrimaryDark">@color/color_333333</item>
+        <!--这是App的主要颜色，用于工具栏背景-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--分割线颜色-->
+        <item name="android:divider">@color/divider</item>
+        <!--强调色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--toolbar searchview hint 颜色-->
+        <item name="android:textColorHint">@color/text_color5</item>
+
+        <item name="colorControlHighlight">@android:color/transparent</item> 
+
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="android:windowBackground">@color/background_color</item>
+
+        <item name="android:itemBackground">@color/item_color</item>
+
+        <!--下面是自定义的属性-->
+        <item name="backgroundColor">@color/background_color</item>
+
+        <item name="toolbarTheme">@style/ToolbarTheme</item>
+
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+
+        <item name="pointColor">@color/colorPrimary</item>
+        <item name="android:datePickerDialogTheme">@style/PickerDialogTheme</item>
+        <item name="android:timePickerDialogTheme">@style/PickerDialogTheme</item>
+
+    </style>
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <style name="BaseAppTheme" parent="AppTheme" />
+
+    <style name="SplashAppTheme" parent="AppTheme">
+        <!--<item name="android:windowAnimationStyle">@style/noAnimation</item>-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/background_color</item>
+    </style>
+
+    <style name="CustomDatePickerDialog" parent="@style/BaseAppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="ChooseScheduleDialog" parent="@style/BaseAppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/material_white</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/dialogAnim</item>
+    </style>
+
+
+    <style name="PickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- ToolBar主题，menu的item字体为白色 -->
+    <style name="ToolBarStyle" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/material_white</item>
+        <item name="android:textColorSecondary">@color/material_white</item>
+        <item name="actionMenuTextColor">@color/material_white</item>
+    </style>
+
+    <!-- ToolBar菜单样式 -->
+    <style name="ToolbarTheme" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="actionMenuTextColor">@color/color_333333</item>
+        <item name="android:textColorPrimary">@color/color_333333</item>
+        <item name="android:textColorSecondary">@color/color_333333</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/color_333333</item>
+
+
+    </style>
+
+    <style name="ToolbarThemeNight" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="actionMenuTextColor">@color/material_white</item>
+        <item name="android:textColor">@color/material_white</item>
+        <item name="android:textColorPrimary">@color/material_white</item>
+        <item name="android:textColorSecondary">@color/material_white</item>
+    </style>
+
+    <!--去掉所有跳转动画-->
+    <style name="noAnimation">
+        <item name="android:activityOpenEnterAnimation">@null
+        </item><!--当启动一个新的界面时，启动的界面使用的动画（进入屏幕）-->
+        <item name="android:activityOpenExitAnimation">@null
+        </item><!--当启动一个新的界面时，之前的界面使用的动画（退出屏幕）-->
+        <item name="android:activityCloseEnterAnimation">@null
+        </item><!--当关闭当前的界面时,进来的界面使用的动画（进入屏幕）-->
+        <item name="android:activityCloseExitAnimation">@null
+        </item><!--当关闭当前的界面时,当前关闭的界面使用的动画（退出屏幕）-->
+        <item name="android:taskOpenEnterAnimation">@null</item><!--当在新的栈启动界面，新的栈启动的界面使用的动画（进入屏幕）-->
+        <item name="android:taskOpenExitAnimation">@null</item><!--当在新的栈启动界面，旧的栈的界面使用的动画（退出屏幕）-->
+        <item name="android:taskCloseEnterAnimation">@null</item><!---->
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <style name="MediaController_Text">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="pop_no_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_show_no_anim</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/pop_hide_no_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="pop_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_show_anim</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/pop_hide_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+    <!--LoginDialogFragment动画-->
+    <style name="dialogAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_push_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_push_out</item>
+    </style>
+
+    <!-- 输入框的样式 -->
+    <style name="btn_style" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">@dimen/dp15</item>
+        <item name="android:textColor">@color/material_white</item>
+        <item name="android:layout_height">@dimen/btn_default_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">@dimen/dp15</item>
+        <item name="android:paddingRight">@dimen/dp15</item>
+        <item name="android:background">@drawable/button_bg</item>
+    </style>
+    <style name="btn_radius_style" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">@dimen/dp15</item>
+        <item name="android:textColor">@color/material_white</item>
+        <item name="android:layout_height">@dimen/btn_default_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">@dimen/dp15</item>
+        <item name="android:paddingRight">@dimen/dp15</item>
+        <item name="android:background">@drawable/button_radius</item>
+    </style>
+    <!-- 输入框的样式 -->
+    <style name="edit_style" parent="@android:style/Widget.EditText">
+        <item name="android:textColorHint">@color/edit_hint</item>
+        <item name="android:textSize">@dimen/sp14</item>
+        <item name="android:textColor">@color/edit_text</item>
+        <item name="android:layout_height">@dimen/edit_default_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">@dimen/dp15</item>
+        <item name="android:paddingRight">@dimen/dp15</item>
+        <item name="android:background">@drawable/shape_edit_bg</item>
+    </style>
+
+    <style name="edit_white_style" parent="@android:style/Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/edit_default_height</item>
+        <item name="android:background">@color/material_white</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textColorHint">@color/color_999999</item>
+        <item name="android:textSize">@dimen/sp16</item>
+        <item name="android:paddingLeft">@dimen/dp10</item>
+        <item name="android:paddingRight">@dimen/dp10</item>
+        <item name="android:gravity">left|center_vertical</item>
+
+    </style>
+
+
+    <style name="AddressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>

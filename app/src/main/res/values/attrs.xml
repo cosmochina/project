@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--toolbar的主题-->
+    <attr name="toolbarTheme" format="reference"/>
+
+    <declare-styleable name="ThreePointLoadingView">
+        <attr name="pointColor" format="color|reference"/>
+    </declare-styleable>
+
+</resources>

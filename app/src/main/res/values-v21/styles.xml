@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="SplashAppTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/background_color</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>
