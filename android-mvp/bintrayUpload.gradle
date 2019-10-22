@@ -2,10 +2,10 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 
-version = "1.0.2"
+version = "1.0.0"
 def siteUrl = 'https://github.com/cosmochina/project'      // 项目的主页
 def gitUrl = 'https://github.com/cosmochina/project.git'   // Git仓库的url
-group = "com.cosmo.mvp"
+group = "com.jiajia.mvp"
 // Maven Group ID for the artifact，一般填你唯包名lwan
 install {
     repositories.mavenInstaller {
@@ -63,7 +63,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "com.cosmo.mvp"
-        name = "mvp"   //发布到JCenter上的项目名字
+        name = "android-mvp"   //发布到JCenter上的项目名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
