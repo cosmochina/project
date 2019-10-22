@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "androidx.constraintlayout:constraintlayout:$constraintlayout"
+    api "androidx.appcompat:appcompat:$appcompat"
+    api "com.google.android.material:material:$material_design"
+    api "androidx.recyclerview:recyclerview:$recyclerview"
+    //RecyclerView分割线
+    api "com.yqritc:recyclerview-flexibledivider:$flexibledivider"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //RxJava
+    api "io.reactivex.rxjava2:rxjava:$rxjava"
+    api "io.reactivex.rxjava2:rxandroid:$rxandroid"
+    //rxjava绑定生命周期
+    api "com.trello.rxlifecycle2:rxlifecycle:$rxlifecycle"
+    api "com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycle"
+    api "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycle"
+    //打印日志
+    api "com.github.zhaokaiqiang.klog:library:$klog"
+    //Material风格Dialog
+    api("com.afollestad.material-dialogs:core:$materialdialogs") {
+        transitive = true
+    }
+    //沉浸栏
+    api "com.gyf.immersionbar:immersionbar:$immersionbar"
+}
+apply from: "bintrayUpload.gradle"
+
