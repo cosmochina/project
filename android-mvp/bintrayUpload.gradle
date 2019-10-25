@@ -2,7 +2,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 
-version = "1.0.0"
+version = "1.0.1"
 def siteUrl = 'https://github.com/cosmochina/project'      // 项目的主页
 def gitUrl = 'https://github.com/cosmochina/project.git'   // Git仓库的url
 group = "com.jiajia.mvp"
